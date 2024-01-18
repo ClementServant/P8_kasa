@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+
+  .container__image {
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    background: #000;
+    mix-blend-mode: darken;
+    object-fit: cover;
+  }
+
+  .charte {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 38px;
+
+    .charte__element {
+      display: flex;
+      width: 1023px;
+      align-items: center;
+      padding: 10px 20px 10px 15px;
+      border-radius: 5px;
+      background: #ff6060;
+      color: #fff;
+      font-family: Montserrat;
+    }
+  }
+}

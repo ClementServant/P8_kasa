@@ -1,9 +1,16 @@
-function Home() {
+import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import Home from '../../components/Home'
+
+const HomePage = () => {
   return (
     <div>
-      <h1>Page d'accueil</h1>
+      <Header />
+      <Home />
+      <Footer />
     </div>
   )
 }
 
-export default Home
+export default HomePage

@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  gap: 720px;
+
+  .header__nav {
+    display: flex;
+    align-items: flex-start;
+    width: 309px;
+    height: 34px;
+    gap: 57px;
+
+    .nav-accueil {
+      width: 136px;
+      color: #ff6060;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142%;
+      text-decoration-line: underline;
+    }
+
+    .nav-apropos {
+      width: 116px;
+      color: #ff6060;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142%;
+    }
+  }
+}

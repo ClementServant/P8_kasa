@@ -1,11 +1,16 @@
-function Apropos() {
+import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import Apropos from '../../components/Apropos'
+
+const AproposPage = () => {
   return (
     <div>
-      <h1>
-        ici sera la page <a-propos></a-propos>
-      </h1>
+      <Header />
+      <Apropos />
+      <Footer />
     </div>
   )
 }
 
-export default Apropos
+export default AproposPage

@@ -1,9 +1,16 @@
-function Logements() {
+import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import Logements from '../../components/Logements'
+
+const LogementsPage = () => {
   return (
     <div>
-      <h1>ici seront les logements</h1>
+      <Header />
+      <Logements />
+      <Footer />
     </div>
   )
 }
 
-export default Logements
+export default LogementsPage

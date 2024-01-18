@@ -1,0 +1,75 @@
+.home {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  padding-top: 45px;
+  background: #fff;
+  gap: 50px;
+
+  .header-image {
+    position: absolute;
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    background: #000;
+    mix-blend-mode: darken;
+    object-fit: cover;
+  }
+
+  .header-text {
+    position: relative;
+    width: 705px;
+    height: 68px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142%;
+    padding: 78px 262px 77px 273px;
+    margin: 0;
+  }
+
+  .logements {
+    height: 829px;
+    border-radius: 25px;
+    background: #f6f6f6;
+    padding: 56px 50px 43px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 60px;
+    margin-bottom: 50px;
+
+    .card {
+      position: relative;
+      width: 30%;
+      height: 340px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card__title {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 300px;
+      height: 52px;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142%;
+      margin: 0;
+    }
+  }
+}
