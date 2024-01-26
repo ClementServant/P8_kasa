@@ -1,9 +1,16 @@
-function Error() {
+import React from 'react'
+import Header from '../../components/Header'
+import Error from '../../components/Error'
+import Footer from '../../components/Footer'
+
+const ErrorPage = () => {
   return (
     <div>
-      <h1>Ici sera la page d'erreur</h1>
+      <Header />
+      <Error />
+      <Footer />
     </div>
   )
 }
 
-export default Error
+export default ErrorPage
