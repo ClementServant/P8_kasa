@@ -3,7 +3,7 @@ import '../style/Apropos.scss'
 import apropos from '../assets/apropos.png'
 import CollapseElement from './CollapseElement'
 
-function AProposPage() {
+function Apropos() {
   const charteElements = [
     {
       text: 'Fiabilité',
@@ -49,4 +49,4 @@ function AProposPage() {
   )
 }
 
-export default AProposPage
+export default Apropos

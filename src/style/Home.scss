@@ -7,7 +7,7 @@
   gap: 50px;
   margin: 0 auto;
 
-  .header-image {
+  .header__image {
     position: absolute;
     width: 1240px;
     height: 223px;
@@ -17,7 +17,7 @@
     object-fit: cover;
   }
 
-  .header-text {
+  .header__text {
     position: relative;
     width: 705px;
     height: 68px;
