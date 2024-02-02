@@ -14,7 +14,7 @@ const Home = () => {
       <section className="logements">
         {logements.map((logements) => (
           <Link
-            to={`/Logements${logements.id}`}
+            to={`/Logements/${logements.id}`}
             key={logements.id}
             className="card"
           >
