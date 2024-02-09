@@ -46,3 +46,26 @@
     text-decoration: underline;
   }
 }
+
+@media (max-width: 768px) {
+  .error {
+    gap: 113px;
+    margin: 113px 0;
+
+    .title {
+      .title__text {
+        font-size: 96px;
+      }
+    }
+
+    .container {
+      width: 260px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .error-link {
+      font-size: 14px;
+    }
+  }
+}

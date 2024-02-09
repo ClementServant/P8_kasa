@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import arrow from '../assets/arrow_back.svg'
 
-const CollapseElement = ({ text, collapseText }) => {
+const Collapse = ({ text, collapseText }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const openCollapse = () => {
@@ -9,8 +9,8 @@ const CollapseElement = ({ text, collapseText }) => {
   }
 
   return (
-    <div className="charte__element">
-      <div className="charte__header" onClick={openCollapse}>
+    <div className="collapse__element">
+      <div className="collapse__header" onClick={openCollapse}>
         {text}
         <img
           className={`arrow ${isOpen ? 'expanded' : ''}`}
@@ -25,4 +25,4 @@ const CollapseElement = ({ text, collapseText }) => {
   )
 }
 
-export default CollapseElement
+export default Collapse

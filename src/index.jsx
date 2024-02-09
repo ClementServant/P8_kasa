@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './style/index.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
@@ -7,7 +7,10 @@ import Logements from './pages/Logements'
 import Apropos from './pages/Apropos'
 import Error from './pages/Error'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+
+const root = createRoot(container)
+root.render(
   <React.StrictMode>
     <Router>
       <Routes>
@@ -17,6 +20,5 @@ ReactDOM.render(
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )

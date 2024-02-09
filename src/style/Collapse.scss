@@ -1,0 +1,90 @@
+.collapse__element {
+  width: 100%;
+  background: #ff6060;
+  color: #fff;
+  border-radius: 5px;
+
+  .collapse__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+  }
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+  }
+
+  .expanded {
+    transform: rotate(-180deg);
+  }
+
+  .collapse-text {
+    width: auto;
+    overflow: hidden;
+    display: none;
+    padding: 20px;
+    background: #f6f6f6;
+    padding: 16px 20px 20px 20px;
+    // animation: closeCollapseAnimation 0.4s ease-in-out 0.2s;
+
+    p {
+      margin: 0;
+      color: #ff6060;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .collapse-text.active {
+    display: block;
+    animation: openCollapseAnimation 0.1s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse__element {
+    .collapse__header {
+      height: 30px;
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    .collapse-text {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@keyframes openCollapseAnimation {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes closeCollapseAnimation {
+  from {
+    height: auto;
+    opacity: 1;
+  }
+
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}

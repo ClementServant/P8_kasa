@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media (max-width: 760px) {
+  .footer {
+    .footer__div {
+      padding: 66px 120px 58px 121px;
+      gap: 0;
+
+      .footer__logo {
+        width: 100%;
+      }
+
+      .footer__text {
+        font-size: 12px;
+      }
+    }
+  }
+}

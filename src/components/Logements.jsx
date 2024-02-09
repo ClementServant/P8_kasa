@@ -1,8 +1,85 @@
 import React from 'react'
 import Slideshow from './Slideshow.jsx'
+import { logements } from '../data/logements.js'
+import { useParams } from 'react-router-dom'
+import '../style/Slideshow.scss'
+import '../style/Logement.scss'
+import '../style/Rating.scss'
+import Collapse from './Collapse.jsx'
+import Rating from './Rating.jsx'
+
+const LocationDetail = ({ title, location, tags }) => {
+  return (
+    <div className="location">
+      <h1 className="logement__title">{title}</h1>
+      <p className="logement__location">{location}</p>
+      <div className="logement__tag">
+        {tags.map((tags, index) => (
+          <p key={index} className="tag">
+            {tags}
+          </p>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const IdentifyDetail = ({ name, picture }) => {
+  return (
+    <div className="proprio">
+      <p className="proprio__name">{name}</p>
+      <img className="proprio__image" src={picture} alt="Photos" />
+    </div>
+  )
+}
 
 const LogementDetail = () => {
-  return <Slideshow />
+  const { id } = useParams()
+  const logement = logements.find((logement) => logement.id === id)
+
+  return (
+    <main className="home">
+      <section className="container">
+        <Slideshow pictures={logement.pictures} />
+        <div className="info-container">
+          <LocationDetail
+            title={logement.title}
+            location={logement.location}
+            tags={logement.tags}
+          />
+          <div className="info__proprio">
+            <IdentifyDetail
+              name={logement.host.name}
+              picture={logement.host.picture}
+            />
+            <Rating rating={logement.rating} />
+          </div>
+        </div>
+        <div className="info__logements">
+          <div className="collapse">
+            <Collapse
+              className="description"
+              text="Description"
+              collapseText={logement.description}
+            />
+          </div>
+          <div className="collapse">
+            <Collapse
+              className="equipments"
+              text="Équipements"
+              collapseText={
+                <ul className="liste_equipments">
+                  {logement.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
 
 export default LogementDetail

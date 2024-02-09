@@ -1,7 +1,8 @@
 import React from 'react'
 import '../style/Apropos.scss'
+import '../style/Collapse.scss'
 import apropos from '../assets/apropos.png'
-import CollapseElement from './CollapseElement'
+import Collapse from './Collapse'
 
 function Apropos() {
   const charteElements = [
@@ -29,7 +30,7 @@ function Apropos() {
 
   return (
     <main className="home">
-      <div>
+      <div className="apropos__header">
         <img
           className="container__image"
           src={apropos}
@@ -38,7 +39,7 @@ function Apropos() {
       </div>
       <section className="charte">
         {charteElements.map((element, index) => (
-          <CollapseElement
+          <Collapse
             key={index}
             text={element.text}
             collapseText={element.collapseText}

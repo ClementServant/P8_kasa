@@ -1,0 +1,33 @@
+.rating {
+  display: flex;
+  width: 196px;
+  height: 36px;
+  gap: 10px;
+
+  span {
+    width: 100%;
+    line-height: 36px;
+    font-size: 36px;
+
+    &.filled {
+      color: #ff6060;
+    }
+
+    &.max {
+      color: #e3e3e3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rating {
+    width: 98px;
+    height: 18px;
+    gap: 5px;
+
+    span {
+      line-height: 18px;
+      font-size: 18px;
+    }
+  }
+}
