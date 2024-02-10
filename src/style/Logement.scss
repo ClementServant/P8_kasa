@@ -139,8 +139,10 @@
             margin-top: 10px;
 
             .tag {
+              width: auto;
+              height: 18px;
               border-radius: 5px;
-              padding: 2px 28px 2px 27px;
+              // padding: 2px 28px 2px 27px;
               font-size: 10px;
             }
           }
@@ -150,6 +152,7 @@
       .info__proprio {
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
         height: 33px;
         margin-top: 16px;
 

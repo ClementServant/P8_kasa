@@ -8,7 +8,7 @@ import '../style/Rating.scss'
 import Collapse from './Collapse.jsx'
 import Rating from './Rating.jsx'
 
-const LocationDetail = ({ title, location, tags }) => {
+const Location = ({ title, location, tags }) => {
   return (
     <div className="location">
       <h1 className="logement__title">{title}</h1>
@@ -24,7 +24,7 @@ const LocationDetail = ({ title, location, tags }) => {
   )
 }
 
-const IdentifyDetail = ({ name, picture }) => {
+const Identity = ({ name, picture }) => {
   return (
     <div className="proprio">
       <p className="proprio__name">{name}</p>
@@ -42,13 +42,13 @@ const LogementDetail = () => {
       <section className="container">
         <Slideshow pictures={logement.pictures} />
         <div className="info-container">
-          <LocationDetail
+          <Location
             title={logement.title}
             location={logement.location}
             tags={logement.tags}
           />
           <div className="info__proprio">
-            <IdentifyDetail
+            <Identity
               name={logement.host.name}
               picture={logement.host.picture}
             />
