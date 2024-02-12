@@ -111,12 +111,11 @@
         .equipments {
           font-size: 18px;
         }
-      }
 
-      .liste_equipments {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        span {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }

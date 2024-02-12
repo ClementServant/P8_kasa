@@ -58,22 +58,16 @@ const LogementDetail = () => {
         <div className="info__logements">
           <div className="collapse">
             <Collapse
-              className="description"
-              text="Description"
+              text={<span className="description">Description</span>}
               collapseText={logement.description}
             />
           </div>
           <div className="collapse">
             <Collapse
-              className="equipments"
-              text="Équipements"
-              collapseText={
-                <ul className="liste_equipments">
-                  {logement.equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                  ))}
-                </ul>
-              }
+              text={<span className="equipments">Équipements</span>}
+              collapseText={logement.equipments.map((equipment, index) => (
+                <span key={index}>{equipment}</span>
+              ))}
             />
           </div>
         </div>
