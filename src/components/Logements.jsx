@@ -6,32 +6,9 @@ import '../style/Slideshow.scss'
 import '../style/Logement.scss'
 import '../style/Rating.scss'
 import Collapse from './Collapse.jsx'
+import Location from './Location.jsx'
+import Identity from './Identity.jsx'
 import Rating from './Rating.jsx'
-
-const Location = ({ title, location, tags }) => {
-  return (
-    <div className="location">
-      <h1 className="logement__title">{title}</h1>
-      <p className="logement__location">{location}</p>
-      <div className="logement__tag">
-        {tags.map((tags, index) => (
-          <p key={index} className="tag">
-            {tags}
-          </p>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-const Identity = ({ name, picture }) => {
-  return (
-    <div className="proprio">
-      <p className="proprio__name">{name}</p>
-      <img className="proprio__image" src={picture} alt="Photos" />
-    </div>
-  )
-}
 
 const Logements = () => {
   const { id } = useParams()
