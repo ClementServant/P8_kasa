@@ -33,10 +33,9 @@
     padding: 20px;
     background: #f6f6f6;
     padding: 16px 20px 20px 20px;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    opacity: 0;
-    transition: height 5s;
+    transition: max-height 0.5s ease-in-out;
 
     p {
       margin: 0;
@@ -48,9 +47,9 @@
   }
 
   .collapse-text.active {
-    display: block;
-    height: auto;
-    opacity: 1;
+    display: flex;
+    max-height: 500px;
+    transition: max-height 5s ease-in-out;
   }
 }
 

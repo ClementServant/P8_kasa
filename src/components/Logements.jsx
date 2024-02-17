@@ -1,7 +1,7 @@
 import React from 'react'
 import Slideshow from './Slideshow.jsx'
 import { logements } from '../data/logements.js'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import '../style/Slideshow.scss'
 import '../style/Logement.scss'
 import '../style/Rating.scss'
@@ -33,9 +33,13 @@ const Identity = ({ name, picture }) => {
   )
 }
 
-const LogementDetail = () => {
+const Logements = () => {
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
+
+  if (!logement) {
+    return <Navigate to="/*" />
+  }
 
   return (
     <main className="home">
@@ -76,4 +80,4 @@ const LogementDetail = () => {
   )
 }
 
-export default LogementDetail
+export default Logements
