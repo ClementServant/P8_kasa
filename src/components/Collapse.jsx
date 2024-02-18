@@ -4,24 +4,22 @@ import arrow from '../assets/arrow_back.svg'
 const Collapse = ({ text, collapseText }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const openCollapse = () => {
+  const toggleCollapse = () => {
     setIsOpen((open) => !open)
   }
 
   return (
-    <div className="collapse__element">
-      <div className="collapse__header" onClick={openCollapse}>
+    <details className={`collapse__element ${isOpen ? 'open' : ''}`}>
+      <summary className="collapse__header" onClick={toggleCollapse}>
         {text}
         <img
           className={`arrow ${isOpen ? 'expanded' : ''}`}
           src={arrow}
           alt="Flèche pour afficher la charte"
         />
-      </div>
-      <div className={`collapse-text ${isOpen ? 'active' : ''}`}>
-        {isOpen && <p>{collapseText}</p>}
-      </div>
-    </div>
+      </summary>
+      <div className="collapse-text">{isOpen && <p>{collapseText}</p>}</div>
+    </details>
   )
 }
 
