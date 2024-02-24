@@ -1,4 +1,4 @@
-.collapse__element {
+details {
   width: 100%;
   background: #ff6060;
   color: #fff;
@@ -8,63 +8,47 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Montserrat';
-    font-size: 24px;
-    font-weight: 500;
-    border-radius: 5px;
     padding: 10px 20px 10px 15px;
-    cursor: pointer;
+
+    span {
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 500;
+      border-radius: 5px;
+    }
 
     .arrow {
       width: 32px;
       height: 32px;
+      cursor: pointer;
       transition: transform 0.5s ease-in-out;
     }
-  }
 
-  &.open {
-    summary .arrow {
+    .arrow::before {
       transform: rotate(-180deg);
     }
   }
 
-  .collapse-text {
-    width: auto;
-    background: #f6f6f6;
-    padding: 16px 20px 20px 20px;
-    overflow: hidden;
-    height: 0;
-    visibility: hidden;
-    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;
-
-    p {
-      margin: 0;
-      color: #ff6060;
-      font-family: 'Montserrat';
-      font-size: 18px;
-      font-weight: 400;
-    }
-  }
-
-  &[open] .collapse-text {
-    height: 100%;
-    visibility: visible;
-    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  summary::-webkit-details-marker {
+    display: none;
   }
 }
 
-@media (max-width: 768px) {
-  .collapse__element {
-    summary {
-      height: 30px;
-      padding: 10px;
-      font-size: 13px;
-    }
+div.collapse-text {
+  width: auto;
+  background: #f6f6f6;
+  // padding: 16px 20px 20px 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
 
-    .collapse-text {
-      p {
-        font-size: 12px;
-      }
-    }
-  }
+details[open] + div .collapse-text {
+  max-height: 800px;
+  transition: max-height 0.5s ease-out;
+}
+
+details[open] .arrow::before {
+  transform: rotate(-180deg);
+  transition: rotate 0.5s ease-out;
 }
