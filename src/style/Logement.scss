@@ -110,6 +110,11 @@
         .description,
         .equipments {
           font-size: 18px;
+          font-weight: 500;
+        }
+        .collapsible {
+          font-size: 18px;
+          font-weight: 400;
         }
 
         span {
@@ -177,6 +182,17 @@
 
         .collapse {
           width: 335px;
+
+          .description,
+          .equipments {
+            font-size: 13px;
+            font-weight: 500;
+          }
+
+          .collapsible {
+            font-size: 12px;
+            font-weight: 400;
+          }
         }
       }
     }

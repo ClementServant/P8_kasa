@@ -4,7 +4,7 @@ import '../style/Collapse.scss'
 
 const Collapse = ({ text, collapseText }) => {
   return (
-    <>
+    <div className="collapse-container">
       <details>
         <summary>
           <span role="term">{text}</span>
@@ -18,7 +18,7 @@ const Collapse = ({ text, collapseText }) => {
       <div role="definition" className="collapse-text">
         <p>{collapseText}</p>
       </div>
-    </>
+    </div>
   )
 }
 
