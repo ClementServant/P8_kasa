@@ -41,8 +41,10 @@ function Apropos() {
         {charteElements.map((element, index) => (
           <Collapse
             key={index}
-            text={element.text}
-            collapseText={element.collapseText}
+            text={<span className="text-element">{element.text}</span>}
+            collapseText={
+              <span className="text-collapsible">{element.collapseText}</span>
+            }
           />
         ))}
       </section>
